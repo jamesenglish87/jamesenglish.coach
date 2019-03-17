@@ -34,11 +34,6 @@ $(DOCDIR):
 
 .phoney: all clean cleandir
 
-clean: cleandir
-	ifeq(1, $(shell find $(DOCSDIR)-type -f -exec command {} \;))
-	rm -rf $(DOCDIR)
-	endif
-
-cleandir:
-	rm -rf $(DOCDIR)/$(DOCS)
+clean:
+	rm -rf $(patsubst %, $(DOCDIR)/%, $(DOCS))
 
