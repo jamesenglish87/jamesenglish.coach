@@ -1,22 +1,12 @@
-# Joel Savitz
-### Personal Website
+# Main title as H1 heading
+### Subtitle as H2 heading
 
-This is me:
+Paragraphs written in in plaintext
 
-[![oops, the image link is broken!](me25.jpg)](me.jpg)
-[![oops, the image link is broken!](also_me25.jpg)](also_me.jpg)
+How to process an `\*.md` file into a finished `\*.html` file
 
-[Here is my github](https://github.com/theyoyojo) | 
-[Here is my resume](./resume.pdf) |
-[Here is my linkedin](https://www.linkedin.com/in/joelsavitz/) |
-[I started TechSimple](http://techsimple.co)
+```
+$ make
+```
 
-I currently work full time as a Linux kernel engineer co-op intern at [Red Hat](https://redhat.com) | [You can contact me here](mailto:joelsavitz@gmail.com)
-
-You can view this website's live production source [right here](https://github.com/theyoyojo/joelsavitz.com)
-
-Publications:
-
-[MYR: A Web-Based Platform for Teaching Coding Using VR (ACM 2019)](https://dl.acm.org/citation.cfm?id=3287482) [Full text](berns_et_al.pdf)
-
-[The Future of intelligence (Self 2017)](ai.html) [Full text](the_future_of_intelligence.pdf)
+Source code can be found [here](https://github.com/underground-software/underground.software)
