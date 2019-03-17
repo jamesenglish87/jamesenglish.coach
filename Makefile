@@ -35,5 +35,5 @@ $(DOCDIR):
 .phoney: all clean
 
 clean:
-	rm -rf $(DOCS) $(DOCDIR)
+	rm -rf $(patsubst %, $(DOCDIR)/%, $(DOCS))
 
