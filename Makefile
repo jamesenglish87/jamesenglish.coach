@@ -32,8 +32,13 @@ all: $(DOCDIR) $(DOCS)
 $(DOCDIR):
 	mkdir $(DOCDIR)
 
-.phoney: all clean
+.phoney: all clean cleandir
 
-clean:
-	rm -rf $(DOCS) $(DOCDIR)
+clean: cleandir
+	ifeq(1, $(shell find $(DOCSDIR)-type -f -exec command {} \;))
+	rm -rf $(DOCDIR)
+	endif
+
+cleandir:
+	rm -rf $(DOCDIR)/$(DOCS)
 
