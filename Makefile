@@ -18,16 +18,22 @@ CC 	= markdown
 LD	= cat
 LDFLAGS = -
 HEADER 	= header
-DOCS 	= $(patsubst %.md, %.html, $(shell find . -name '*.md'))
+SRCDIR  = src
+DOCDIR  = docs
+DOCS 	= $(patsubst $(SRCDIR)/%.md, %.html, $(shell find $(SRCDIR) -wholename '*.md'))
 
 
-all: $(DOCS)
-	echo $(DOCS)
+all: $(DOCDIR) $(DOCS)
+	echo Generating $(DOCS)...
 
-%.html: %.md
-	$(shell $(CC) $^ | $(LD) $(HEADER) $(LDFLAGS) > $@)
+%.html: $(SRCDIR)/%.md
+	$(shell $(CC) $^ | $(LD) $(HEADER) $(LDFLAGS) > $(patsubst %.html, $(DOCDIR)/%.html, $@))
+
+$(DOCDIR):
+	mkdir $(DOCDIR)
 
 .phoney: all clean
+
 clean:
-	rm $(DOCS)
+	rm -rf $(DOCS) $(DOCDIR)
 
