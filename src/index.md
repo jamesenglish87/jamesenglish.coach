@@ -12,5 +12,3 @@ $ make
 ```
 
 Source code can be found [here](https://github.com/underground-software/template.underground.software)
-
-[UNDERGROUND SOFTWARE HOME](https://underground.software)
